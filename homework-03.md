@@ -36,7 +36,7 @@ Account 2: Account number (string)
 
 
 
-Sample input:
+## Sample input
 ```
 d|420|3150|5400
 c|300|1710|4300
