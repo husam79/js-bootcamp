@@ -31,7 +31,7 @@
 
 فهذا يعني أنّ خرج التابع `generateAccountStatement` في هذه الحالة هو:
 
-```json
+```javascript
 {
 	account_number: '1000',
 	statement: [
