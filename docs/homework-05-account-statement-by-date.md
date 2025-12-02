@@ -9,7 +9,7 @@
 			debit: number,
 			credit: number,
 			balance: number,
-      date: string
+      		date: string
 		},
 		...
 	 ]
@@ -67,14 +67,14 @@ d|450|6000|3300|2025-12-23
 			debit: 75,
 			credit: 0,
 			balance: 75,
-      date: '2025-05-09'
+			date: '2025-05-09'
 		},
 		{
 			no: 2,
 			debit: 0,
 			credit: 640,
 			balance: -565,
-      date: '2025-08-04'
+      		date: '2025-08-04'
 		},
 	]
 }
