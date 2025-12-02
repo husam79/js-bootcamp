@@ -36,14 +36,14 @@ generateAccountStatementByDate('1200', '2025-04-01', '2025-09-20')
 			balance: 120,
       		date: '2025-04-18'
 		},
-    {
+	    {
 			no: 3,
 			debit: 0,
 			credit: 1100,
 			balance: -980,
       		date: '2025-05-27'
 		},
-    {
+	    {
 			no: 4,
 			debit: 0,
 			credit: 500,
