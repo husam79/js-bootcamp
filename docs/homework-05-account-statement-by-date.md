@@ -9,7 +9,7 @@
 			debit: number,
 			credit: number,
 			balance: number,
-      		date: string
+ 		date: string
 		},
 		...
 	 ]
