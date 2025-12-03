@@ -89,11 +89,13 @@ d|420|3150|5400|2025-11-03
 
 ## المهمة الثانية
 أنشئ تابع جديد اسمه `saveJournals` ضمن الملف `generateJournals.js` يقبل بارامتر واحد فقط، هو المصفوفة من خرج التابع `generateJournals` حيث يعمل على حفظ المصفوفة الممررة ضمن ملف اسمه journals.json. يمكنك مطالعة ما يلي:
+
 https://www.w3schools.com/nodejs/nodejs_filesystem.asp
 https://www.youtube.com/watch?v=XzPkZstYLyQ
 
 ## المهمة الثالثة
 ضمن الملف `generateQR.js` أنشئ تابع جديد اسمه `generateQR` يقبل بارامتر واحد هو معرف `id` أي journal موجودة ضمن الملف `journals.json` سيعمل هذا التابع على قراءة هذا الملف واستخلاص ال journal الموافقة، ومن ثم يجب ترميزها باستخدام base64. اقرأ المقال التالي:
+
 https://www.digitalocean.com/community/tutorials/how-to-encode-and-decode-strings-with-base64-in-javascript
 
 بعد الحصول على ترميز base64 لل journal المطلوب، استخدام المكتبة qrcode-terminal في تحويل هذا الترميز إلى رمز qrcode لطباعته على الشاشة
