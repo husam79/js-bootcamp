@@ -100,3 +100,14 @@ d|420|3150|5400|2025-11-03
 
 بعد الحصول على ترميز base64 لل journal المطلوب، استخدام المكتبة qrcode-terminal في تحويل هذا الترميز إلى رمز qrcode لطباعته على الشاشة
 - https://www.npmjs.com/package/qrcode-terminal
+
+### ملاحظة مهمة
+ستحتاج إلى استخدام الأمر التالي للتعامل مع المكتبة qrcode-terminal:
+```javascript
+const qrcode = (await import('qrcode-terminal')).default;
+```
+
+ومن ثم يمكنك استخدام `qrcode` في توليد أي كود تحتاجه بالشكل التالي:
+```javascript
+qrcode.generate('Hello!');
+```
