@@ -51,22 +51,43 @@ A journal is an object with these properties:
 ```json
 {
   "id": "string (required, must be unique)",
-  "title": "string",
-  "content": "string",
-  "author": "string"
+  "total": "number (total amount)",
+  "entries": [
+    {
+      "no": "number (entry number)",
+      "account": "string (account code)",
+      "debit": "number (amount)",
+      "credit": "number (amount)",
+      "date": "string (YYYY-MM-DD)"
+    }
+  ]
 }
 ```
 
 **Example:**
 ```json
 {
-  "id": "1",
-  "title": "My First Day",
-  "content": "Today I learned about APIs!",
-  "author": "Ahmed"
+  "id": "3aebdcf0-100f-4ee3-b350-2c0ff2aa7d5b",
+  "total": 420,
+  "entries": [
+    {
+      "no": 1,
+      "account": "3150",
+      "debit": 420,
+      "credit": 0,
+      "date": "2025-11-03"
+    },
+    {
+      "no": 2,
+      "account": "5400",
+      "debit": 0,
+      "credit": 420,
+      "date": "2025-11-03"
+    }
+  ]
 }
 ```
-
+**Remember:** In accounting, total debit must equal total credit!
 ---
 
 ## 📝 Tasks
@@ -80,8 +101,8 @@ A journal is an object with these properties:
 **What you will receive:** An array of journal objects
 ```json
 [
-  { "id": "1", "title": "...", "content": "...", "author": "..." },
-  { "id": "2", "title": "...", "content": "...", "author": "..." }
+  { "id": "...", "total": ..., "entries": [...] },
+  { "id": "...", "total": ..., "entries": [...] }
 ]
 ```
 
@@ -98,13 +119,15 @@ A journal is an object with these properties:
 
 **Endpoint:** `POST /journal`
 
-**What you need to send:** A journal object with an `id`
+**What you need to send:** A journal object with `id`, `total`, and `entries`
 ```json
 {
   "id": "your-unique-id",
-  "title": "your title",
-  "content": "your content",
-  "author": "your name"
+  "total": ...,
+  "entries": [
+    { "no": 1, "account": "...", "debit": ..., "credit": ..., "date": "..." },
+    { "no": 2, "account": "...", "debit": ..., "credit": ..., "date": "..." }
+  ]
 }
 ```
 
@@ -129,10 +152,11 @@ A journal is an object with these properties:
 **What you will receive:** One journal object
 ```json
 {
-  "id": "1",
-  "title": "...",
-  "content": "...",
-  "author": "..."
+  "id": "...",
+  "total": ...,
+  "entries": [
+    { "no": 1, "account": "...", "debit": ..., "credit": ..., "date": "..." }
+  ]
 }
 ```
 
@@ -152,9 +176,11 @@ A journal is an object with these properties:
 **What you need to send:** The updated data
 ```json
 {
-  "title": "new title",
-  "content": "new content",
-  "author": "new author"
+ "total": ...,
+  "entries": [
+    { "no": 1, "account": "...", "debit": ..., "credit": ..., "date": "..." },
+    { "no": 2, "account": "...", "debit": ..., "credit": ..., "date": "..." }
+  ]
 }
 ```
 
