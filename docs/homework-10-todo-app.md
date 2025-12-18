@@ -13,6 +13,8 @@
 
 ---
 
+<img width="1600" height="1280" alt="image" src="https://github.com/user-attachments/assets/0cb5a38f-7f55-4180-9cd1-d7adb66dd822" />
+
 ## 1. المقدمة
 
 ### 1.1 الغرض من الوثيقة
